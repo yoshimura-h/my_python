@@ -1,8 +1,0 @@
-train: ../data/obj/images/training/
-val: ../data/obj/images/validation/
-
-# number of classes
-nc: 2
-
-# class names
-names: ['with mask', 'without mask']
