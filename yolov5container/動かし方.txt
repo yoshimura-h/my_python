@@ -1,0 +1,61 @@
+
+wsl2
+
+memory=5GB
+wsl --shutdown
+
+
+
+
+docker build ./ -t example
+
+docker images
+コンテナ名かコンテナIDを使いたいので確認
+
+docker run --gpus all -v C:/Users/ringa/Desktop/dd:/root/src -it example /bin/bash
+
+
+nvidia-smi
+nvidia動いているか確認
+
+python3 set_data.py
+
+cd yolov5_ws
+cd yolov5
+pip install -r requirements.txt
+
+dataset.yamlはつくっておく
+
+python3 train.py --img 640 --batch 16 --epochs 5 --data dataset.yaml
+
+
+
+
+ctrl + c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://blog.techlab-xe.net/using-gpu-in-dockerdesktop/
+
+https://qiita.com/YumaInaura/items/e7155b309e109bc75cf8
+
+https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
+
+https://medium.com/mlearning-ai/training-yolov5-custom-dataset-with-ease-e4f6272148ad
+set_data.pyのもと
